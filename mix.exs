@@ -10,7 +10,12 @@ defmodule SimpleCan.Mixfile do
       deps: deps(),
       description: description(),
       package: package(),
-      source_url: "https://github.com/craig-day/simple_can"
+      source_url: "https://github.com/craig-day/simple_can",
+      homepage_url: "https://github.com/craig-day/simple_can",
+      docs: [
+        main: "readme",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -23,7 +28,9 @@ defmodule SimpleCan.Mixfile do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false}
+    ]
   end
 
   defp description() do
