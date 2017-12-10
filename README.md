@@ -37,6 +37,7 @@ The docs can be found at [https://hexdocs.pm/simple_can](https://hexdocs.pm/simp
     ```
 
 1. Import `SimpleCan` and use it
+
     _note:_ (you can optionally specify `only: [can?: 3]` but that is the only function defined anyway)
 
     ```elixir
