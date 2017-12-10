@@ -23,7 +23,7 @@ be found at [https://hexdocs.pm/simple_can](https://hexdocs.pm/simple_can).
 
 1. Define an implementation of the `SimpleCan.Can` protocol for a specific module
 
-    ```
+    ```elixir
     defimpl SimpleCan.Can, for: MyApp.User do
       def can?(%MyApp.User{role: role}, :create, %MyApp.OtherResource{}) do
         case role do
@@ -42,7 +42,7 @@ be found at [https://hexdocs.pm/simple_can](https://hexdocs.pm/simple_can).
 1. Import `SimpleCan` and use it
     _note:_ (you can optionally specify `only: [can?: 3]` but that is the only function defined anyway)
 
-    ```
+    ```elixir
     import SimpleCan
 
     def create_object(object) do
