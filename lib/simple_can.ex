@@ -1,8 +1,6 @@
 defmodule SimpleCan do
   @moduledoc """
-  This provides the basic `can?` macro that you can use to check authorization.
-
-  Just `import` the `can?/3` macro into any module to use.
+  This provides the basic `can?` function that you can use to check authorization.
 
   ## Example
 
@@ -23,14 +21,12 @@ defmodule SimpleCan do
   """
 
   @doc """
-  The can macro to check if an actor can take an action on a subject. This will
+  The function to check if an actor can take an action on a subject. This will
   call the `can?/3` function of an implementation of the `SimpleCan.Can`
   protocol.
   """
   @spec can?(any, atom, any) :: boolean
-  defmacro can?(actor, action, subject) do
-    quote bind_quoted: [actor: actor, action: action, subject: subject] do
-      SimpleCan.Can.can?(actor, action, subject)
-    end
+  def can?(actor, action, subject) do
+    SimpleCan.Can.can?(actor, action, subject)
   end
 end
