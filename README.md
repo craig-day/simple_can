@@ -11,7 +11,7 @@ The package can be installed by adding `simple_can` to your list of dependencies
 ```elixir
 def deps do
   [
-    {:simple_can, "~> 0.1.0"}
+    {:simple_can, "~> 1.0.0"}
   ]
 end
 ```

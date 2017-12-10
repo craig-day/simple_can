@@ -4,7 +4,7 @@ defmodule SimpleCan.Mixfile do
   def project do
     [
       app: :simple_can,
-      version: "0.1.0",
+      version: "1.0.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       consolidate_protocols: Mix.env != :test,
