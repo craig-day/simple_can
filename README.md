@@ -1,5 +1,7 @@
 # SimpleCan
 
+[![Build Status](https://travis-ci.org/craig-day/simple_can.svg?branch=master)](https://travis-ci.org/craig-day/simple_can)
+
 A simple library to facilitate authorization in your app. This was inspired by [Canada](https://github.com/jarednorman/canada) but with a more straightforward API.
 
 ## Installation
