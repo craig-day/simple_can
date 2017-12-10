@@ -7,7 +7,10 @@ defmodule SimpleCan.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      package: package(),
+      source_url: "https://github.com/craig-day/simple_can"
     ]
   end
 
@@ -20,9 +23,19 @@ defmodule SimpleCan.Mixfile do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
+    []
+  end
+
+  defp description() do
+    "A simple library to facilitate authorization."
+  end
+
+  defp package() do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      files: ["lib", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["Craig Day"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/craig-day/simple_can"}
     ]
   end
 end
